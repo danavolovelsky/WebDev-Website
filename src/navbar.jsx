@@ -96,7 +96,7 @@ export default function Navbar()
         <a onClick={() => {navigate("./Home.jsx"); handleLinkClick('home');}} className={navbarStyle.home}>Home</a>
         <a onClick={() => {navigate("./About.jsx"); handleLinkClick('about');}} className={navbarStyle.about}>About</a>
         <a onClick={() => {navigate("./Work.jsx"); handleLinkClick('work');}} className={navbarStyle.work}>Work</a>        
-        <a onClick={() => {navigate("./Contact.jsx"); handleLinkClick('contact');}} className={navbarStyle.contact}>Contact</a>
+        <a onClick={() => {navigate("/Contact.jsx"); handleLinkClick('contact');}} className={navbarStyle.contact}>Contact</a>
       </div>
       </Html>
 
