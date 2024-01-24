@@ -37,7 +37,7 @@ const Popup = ({page, onClose}) => {
           <div className="externalBook">
       <iframe
         id="iframe"
-        src={`/turntest.html?page=${page}`}
+        src={`./turntest.html?page=${page}`}
                 width="100%"
         height="550px"
       />

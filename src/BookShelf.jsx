@@ -14,7 +14,7 @@ export default function BookShelf()
 
     const bookShelfRef = useRef();
     const { scene } = useThree();
-    const bookShelf = useLoader(GLTFLoader, '/models/bookshelf.gltf')
+    const bookShelf = useLoader(GLTFLoader, './models/bookshelf.gltf')
 
     // Assigns a reference to the bookshelf group
     bookShelfRef.current = bookShelf.scene;

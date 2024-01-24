@@ -38,9 +38,9 @@ const newQuaternion = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector
 camera.quaternion.slerp(newQuaternion, 0.5);
   
   });
-  const github = useLoader(TextureLoader, "/visuals/github.png"); 
+  const github = useLoader(TextureLoader, "./visuals/github.png"); 
   github.minFilter = THREE.LinearFilter;
-  const linkedin = useLoader(TextureLoader, "/visuals/linkedin.png"); 
+  const linkedin = useLoader(TextureLoader, "./visuals/linkedin.png"); 
   linkedin.minFilter = THREE.LinearFilter;
       return (
     <>
@@ -65,11 +65,11 @@ camera.quaternion.slerp(newQuaternion, 0.5);
       </form>
     </Html>
     <mesh onClick={(event) => window.location.href='https://github.com/danavolovelsky'} position={[1.94, 5.26, -2.45]} rotation-x={ Math.PI * 1.5 }>
-    <planeGeometry args={[0.4, 0.4]}/>
+    <planeGeometry args={[0.5, 0.5]}/>
         <meshStandardMaterial map={github} side={THREE.DoubleSide} />
       </mesh>
       <mesh onClick={(event) => window.location.href='https://www.linkedin.com/in/dana-volovelsky'}position={[1.94, 5.26, -1.45]} rotation-x={ Math.PI * 1.5 }>
-    <planeGeometry args={[0.4, 0.4]}/>
+    <planeGeometry args={[0.5, 0.5]}/>
         <meshStandardMaterial map={linkedin} side={THREE.DoubleSide} />
       </mesh>
 

@@ -24,7 +24,7 @@ export default function About()
     camera.lookAt(lookAt);    
   });
 
-  const texture = useLoader(TextureLoader, "/visuals/speechBubble1.png"); 
+  const texture = useLoader(TextureLoader, "./visuals/speechBubble1.png"); 
   texture.minFilter = THREE.LinearFilter;
 
     return <>
