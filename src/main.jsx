@@ -31,7 +31,7 @@ root.render(
       toneMapping: THREE.ACESFilmicToneMapping,
       outputColorSpace: THREE.LinearSRGBColorSpace
   } }>
-        <Routes basename="/Home.jsx">
+        <Routes >
         <Route exact path="./Home.jsx" element={<Home/>} />
         <Route path="./About.jsx" element={<About/>} />
         <Route path="./Work.jsx" element={<Work/>} />
