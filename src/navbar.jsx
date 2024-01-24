@@ -18,14 +18,15 @@ export default function Navbar()
   console.log(selectedLink);
 
   const handleLinkClick = (link) => {
-    if (selectedLink === link) {
-      // Reload the page
-      window.location.reload();
-    } else {
+    if (selectedLink !== link) {
       setSelectedLink(link);
       localStorage.setItem('selectedLink', link);
+  
+      // Use React Router's navigate function for navigation
+      navigate(`/${link}`);
     }
   };
+  
 
   const { resetPositionsRef} = useScene();
 
