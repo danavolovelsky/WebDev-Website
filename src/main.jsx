@@ -13,10 +13,10 @@ import Work from './Work.jsx'
 import About from './About';
 import Home from './Home';
 import Contact from './Contact';
-import pictureFrames from './pictureFrames';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import { SceneProvider } from './SceneContext';
-import OrbitControl from './Orbitcontrol';
+import Furniture from './furniture.jsx';
+import Resize from './resize.jsx';
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -26,7 +26,6 @@ root.render(
 
     <Canvas  
     shadows
-    camera= {{fov:75, near:0.1, far:1000, position:[0, 13.5, 22],rotation:[0,0,0]}}
     gl={ {
       antialias: true,
       toneMapping: THREE.ACESFilmicToneMapping,
@@ -38,11 +37,12 @@ root.render(
         <Route path="/Work.jsx" element={<Work/>} />
         <Route path="/Contact.jsx" element={<Contact/>} />
       </Routes>
-
     <Lights/>
     <Navbar/>
+    <Resize/>
     <BookShelf/>
     <CreateWalls />
+   <Furniture/>
     <Sky/>
     </Canvas>
     </SceneProvider>

@@ -17,8 +17,8 @@ const cameraPositions = {
         duration: 1000,
     },
     about: {
-        position: [-5, 5, 0],
-        lookAt: new THREE.Vector3(-1, 15, 0),
+        position: [24, 15, 0],
+        lookAt: new THREE.Vector3(24, 15, -20),
         duration: 1000,
     },
     work: {
@@ -27,8 +27,8 @@ const cameraPositions = {
         duration: 1000,
     },
     contact: {
-        position: [-20, 9.5, 0],
-        lookAt: new THREE.Vector3(-20, 9.5, -2),
+        position: [0, 7.2, -2],
+        lookAt: new THREE.Vector3(0, 5, -2),
         duration: 1000,
     },
 };

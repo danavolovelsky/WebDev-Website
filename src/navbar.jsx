@@ -1,38 +1,47 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { Html } from '@react-three/drei';
-import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import { useThree } from "@react-three/fiber"
-import { useTexture, Torus } from '@react-three/drei';
 import Work from './Work.jsx'
 import About from './About.jsx'
 import Contact from './Contact.jsx'
 import Home from './Home.jsx';
 import { useScene } from './SceneContext.jsx';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 export default function Navbar()
 {
 
-  const [selectedLink, setSelectedLink] = useState(null);
+  const [selectedLink, setSelectedLink] = useState((home) => {
+    // Retrieve the selected link from localStorage on component mount
+    return localStorage.getItem('selectedLink') || 'home';
+    
+  });
+  console.log(selectedLink);
+
   const handleLinkClick = (link) => {
-    setSelectedLink(link);
+    if (selectedLink === link) {
+      // Reload the page
+      window.location.reload();
+    } else {
+      setSelectedLink(link);
+      localStorage.setItem('selectedLink', link);
+    }
   };
+
   const { resetPositionsRef} = useScene();
 
   const navigate = useNavigate()
   const navbarPosition = {
     home: [-30, 13.5, -5.55],
-    about: [-31, 9, -10.55], // Adjust the position for the 'about' page
-    work: [-31, 9, -10.55], // Adjust the position for the 'work' page
-    contact: [-31, 9, -10.55], // Adjust the position for the 'contact' page
+    about: [13, 14.3, -10.55], // Adjust the position for the 'about' page
+    work: [-31, 8.8, -10.55], // Adjust the position for the 'work' page
+    contact: [-11, -3.35, -1.4], // Adjust the position for the 'contact' page
   };
 
   const navbarRotation = {
-    home: [Math.PI * 0.5],
-    about: [0],
-    work: [0],
-    contact:[0]
+    home: [0, Math.PI * 0.5, 0],
+    about: [0, 0, 0],
+    work: [0, 0, 0],
+    contact:[-Math.PI / 2, 0, 0]
   }
 
   const navbarStyle = {
@@ -45,6 +54,7 @@ export default function Navbar()
   if (selectedLink !== "home" && selectedLink !== null) {
     Object.keys(navbarStyle).forEach((link) => {
       navbarStyle[link] += " active";
+      return
     });
   }
   const currentNavbarRotation = navbarRotation[selectedLink] || navbarRotation.home;
@@ -70,15 +80,7 @@ export default function Navbar()
         { position: [-30, 5.75, -9.5], args: [1.5, 5.5, 1] },
       ];
 
-    const textures = {
-        ...useTexture({
-          map: "./Textures/Metal007_1K-JPG_Color.jpg",
-          roughnessMap: "./Textures/Metal007_1K-JPG_Roughness.jpg",
-          metalnessMap: "./Textures/Metal007_1K-JPG_Metalness.jpg",
-          normalMap: "./Textures/Metal007_1K-JPG_NormalGL.jpg",
-        }),
-        metalness: 0.2
-      };
+
 
       useEffect(() => {
         if (selectedLink !== 'work' && resetPositionsRef.current) {
@@ -89,7 +91,7 @@ export default function Navbar()
 
     return <>
 
-      <Html rotation-y={currentNavbarRotation} position={currentNavbarPosition} transform>        
+      <Html rotation={currentNavbarRotation} position={currentNavbarPosition} transform>        
       <div className="navbar">
         <a onClick={() => {navigate("/Home.jsx"); handleLinkClick('home');}} className={navbarStyle.home}>Home</a>
         <a onClick={() => {navigate("/About.jsx"); handleLinkClick('about');}} className={navbarStyle.about}>About</a>
@@ -105,16 +107,16 @@ export default function Navbar()
 
 
 
-
-      {positions.map(({ position, args }, index) => (
-
-  <group key={index}>
-  <mesh key={index} position={position}>
-    <boxGeometry args={args} />
-    <meshStandardMaterial {...textures} side={THREE.DoubleSide} />
-  </mesh>
-  </group>
-  ))}
+      {selectedLink === "home" && (
+      <>
+        {positions.map(({ position, args }, index) => (
+          <mesh key={index} position={position}>
+            <boxGeometry args={args} />
+            <meshStandardMaterial color={0xebe4d4} side={THREE.DoubleSide} />
+          </mesh>
+        ))}
+      </>
+    )}
     </>
   
 }

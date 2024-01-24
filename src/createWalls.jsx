@@ -13,7 +13,7 @@ export default function CreateWalls()
     metalness: 0.2
   };
     return <>
-      <mesh rotation-x={ Math.PI * 0.5 }>
+      <mesh receiveShadow rotation-x={ Math.PI * 0.5 }>
         <planeGeometry args={[60, 60]}/>
         <meshStandardMaterial color={"#B18663"} side={THREE.DoubleSide} />
       </mesh>

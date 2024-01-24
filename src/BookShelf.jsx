@@ -14,7 +14,7 @@ export default function BookShelf()
 
     const bookShelfRef = useRef();
     const { scene } = useThree();
-    const bookShelf = useLoader(GLTFLoader, './bookshelf.gltf')
+    const bookShelf = useLoader(GLTFLoader, 'models/bookshelf.gltf')
 
     // Assigns a reference to the bookshelf group
     bookShelfRef.current = bookShelf.scene;
@@ -36,7 +36,6 @@ export default function BookShelf()
         bookOnShelves(scene, bookShelfRef.current, shelf4, 20, projectBookRef);
       }, []); // Empty dependency array ensures the effect runs only once on mount
 
-      console.log(projectBookRef);
       return (
     <>
       <primitive
@@ -51,13 +50,13 @@ export default function BookShelf()
 
 let projectCount = -1;
 let totalNumBooks = 95;
-let projectBooks = 4;
+let projectBooks = 3;
 let bookDistance = Math.round(totalNumBooks / projectBooks);
 
 // Fill the shelves with books
 function bookOnShelves(scene, bookshelf, shelf, numberOfBooks, projectBookRef) {
 
-    const bookColors = [0xd51b11, 0xB63400, 0xC79274, 0x5F021F, 0xEDC9AF, 0xD54B00, 0xFF8103, 0x6E260E, 0x8B0000, 0xeee0ca, 0xC4A484];
+    const bookColors = [0xd51b11, 0xB63400, 0xC79274, 0x5F021F, 0xEDC9AF, 0xD54B00, 0x6E260E, 0xA52A2A, 0xeee0ca, 0xC4A484, 0x880808];
     let currentXPosition = -8;
 
     for (let i = 0; i < numberOfBooks && currentXPosition <= 8; i++) {
@@ -71,11 +70,11 @@ function bookOnShelves(scene, bookshelf, shelf, numberOfBooks, projectBookRef) {
       const projectBookGeometry = new THREE.BoxGeometry(randomWidth, 3, 2);
 
       const bookCoverMaterials = [
-        new THREE.MeshBasicMaterial({color: isProjectBook ? 0x4169e1 : randomColor}), // Top side
-        new THREE.MeshBasicMaterial({color: isProjectBook ? 0x4169e1 : randomColor}), // Bottom side
+        new THREE.MeshBasicMaterial({color: isProjectBook ? 0xe89c31 : randomColor}), // Top side
+        new THREE.MeshBasicMaterial({color: isProjectBook ? 0xe89c31 : randomColor}), // Bottom side
         new THREE.MeshBasicMaterial({color: 0xFFFFFF}), // Left side
         new THREE.MeshBasicMaterial({color: 0xFFFFFF}), // Right side
-        new THREE.MeshBasicMaterial({color: isProjectBook ? 0x4169e1 : randomColor}), // Front side
+        new THREE.MeshBasicMaterial({color: isProjectBook ? 0xe89c31 : randomColor}), // Front side
         new THREE.MeshBasicMaterial({color: isProjectBook ? 0xFFFFFF : randomColor})  // Back side
     ];      
       const book = isProjectBook 
