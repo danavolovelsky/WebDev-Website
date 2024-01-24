@@ -20,7 +20,7 @@ export default function Navbar()
   const handleLinkClick = (link) => {
     if (selectedLink === link) {
       // Reload the page
-console.log("!");
+      window.location.reload();
     } else {
       setSelectedLink(link);
       localStorage.setItem('selectedLink', link);
