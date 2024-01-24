@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Swanky and Moo Moo'; /*"Swanky and Moo Moo"*/
-  src: url('./SwankyandMooMoo-Regular.ttf') format('truetype');
+  src: url('/SwankyandMooMoo-Regular.ttf') format('truetype');
 }
 
 body {
@@ -173,7 +173,7 @@ button:hover {
     /* medium screens (tablets) */
 @media only screen and (max-width: 1400px) {
   #aboutme {
-   font-size: 1vw;
+   font-size: 1.4vw;
   }
 }
 
@@ -181,6 +181,7 @@ button:hover {
 
 @media only screen and (max-width: 1024px) {
   #aboutme{
-    font-size: 1.2vw;
+    font-size: 0.7vw;
+    padding-left: 10vw;
   }
 }

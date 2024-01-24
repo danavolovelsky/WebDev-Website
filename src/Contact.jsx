@@ -38,9 +38,9 @@ const newQuaternion = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector
 camera.quaternion.slerp(newQuaternion, 0.5);
   
   });
-  const github = useLoader(TextureLoader, "visuals/github.png"); 
+  const github = useLoader(TextureLoader, "/visuals/github.png"); 
   github.minFilter = THREE.LinearFilter;
-  const linkedin = useLoader(TextureLoader, "visuals/linkedin.png"); 
+  const linkedin = useLoader(TextureLoader, "/visuals/linkedin.png"); 
   linkedin.minFilter = THREE.LinearFilter;
       return (
     <>

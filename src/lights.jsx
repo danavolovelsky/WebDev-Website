@@ -8,7 +8,7 @@ import { useLoader } from '@react-three/fiber'
 
 export default function Lights()
 {
-    const standingLamp = useLoader(GLTFLoader, 'models/lamp.gltf') // https://www.turbosquid.com/de/3d-models/eternidat-sp6-chrome-3d-1853372
+    const standingLamp = useLoader(GLTFLoader, '/models/lamp.gltf') // https://www.turbosquid.com/de/3d-models/eternidat-sp6-chrome-3d-1853372
     return <>
         <primitive
         object={standingLamp.scene}

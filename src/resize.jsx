@@ -6,40 +6,31 @@ const Resize = () => {
   const { set } = useThree();
   const cameraRef = useRef(new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000));
 
-  useEffect(() => {
-    // Initial setup of the camera
+  const updateCamera = () => {
+    const { innerWidth: width, innerHeight: height } = window;
+    const aspectRatio = width / height;
+    const fov = calculateFov(width);
+
+    cameraRef.current.fov = fov;
+    cameraRef.current.aspect = aspectRatio;
+    cameraRef.current.updateProjectionMatrix();
+
     set((state) => ({
       ...state,
       camera: cameraRef.current,
     }));
+  };
 
-    const onWindowResize = () => {
-      console.log('Window resized!');
-      const { innerWidth: width, innerHeight: height } = window;
-
-      // Calculate aspect ratio
-      const aspectRatio = width / height;
-
-      // Calculate FOV using some function of aspect ratio
-      const fov = calculateFov(width);
-
-      // Update the camera's FOV and aspect ratio
-      cameraRef.current.fov = fov;
-      cameraRef.current.aspect = aspectRatio;
-      cameraRef.current.updateProjectionMatrix();
-
-      set((state) => ({
-        ...state,
-        camera: cameraRef.current,
-      }));
-    };
+  useEffect(() => {
+    // Initial setup of the camera
+    updateCamera();
 
     // Add event listener for window resize
-    window.addEventListener('resize', onWindowResize);
+    window.addEventListener('resize', updateCamera);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', onWindowResize);
+      window.removeEventListener('resize', updateCamera);
     };
   }, [set]);
 

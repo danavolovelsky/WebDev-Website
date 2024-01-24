@@ -16,10 +16,10 @@ export default function Furniture()
   const tableMaterial = new MeshStandardMaterial({ color: 0xA52A2A, roughness: 0.5, metalness: 0.7 });
   const doorMaterial = new MeshStandardMaterial({ color: 0xebe4d4});
 
-  const ovalTable = useFBX("models/ovalTable.fbx"); //https://www.turbosquid.com/3d-models/3d-juice-oval-table-by-miniforms-model-1946610
-  const door = useFBX("models/door.fbx"); //https://www.turbosquid.com/3d-models/3d-juice-oval-table-by-miniforms-model-1946610
+  const ovalTable = useFBX("/models/ovalTable.fbx"); //https://www.turbosquid.com/3d-models/3d-juice-oval-table-by-miniforms-model-1946610
+  const door = useFBX("/models/door.fbx"); //https://www.turbosquid.com/3d-models/3d-juice-oval-table-by-miniforms-model-1946610
 
-  const chairModel = useLoader(GLTFLoader, "models/chair.gltf")
+  const chairModel = useLoader(GLTFLoader, "/models/chair.gltf")
 
   ovalTable.traverse(child => {
     if (child instanceof THREE.Mesh) {
@@ -36,7 +36,7 @@ export default function Furniture()
     }
   });
 
-  const texture = useLoader(TextureLoader, "visuals/portrait2.jpg"); 
+  const texture = useLoader(TextureLoader, "/visuals/portrait2.jpg"); 
   texture.minFilter = THREE.LinearFilter;
 
   const chair1 = chairModel.scene.clone(true);
@@ -82,7 +82,7 @@ export default function Furniture()
 
       <mesh 
         position={[17, 15, -19.9]} 
-        onClick={(event) => window.location.href='visuals/Dana_Volovelsky_CV.pdf'}
+        onClick={(event) => window.location.href='/visuals/Dana_Volovelsky_CV.pdf'}
         >
         <planeGeometry args={[10, 10]}/>
         <meshStandardMaterial map={texture} side={THREE.DoubleSide} />
