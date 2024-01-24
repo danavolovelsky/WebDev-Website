@@ -32,10 +32,10 @@ root.render(
       outputColorSpace: THREE.LinearSRGBColorSpace
   } }>
         <Routes>
-        <Route exact path="/Home.jsx" element={<Home/>} />
-        <Route path="/About.jsx" element={<About/>} />
-        <Route path="/Work.jsx" element={<Work/>} />
-        <Route path="/Contact.jsx" element={<Contact/>} />
+        <Route exact path="./Home.jsx" element={<Home/>} />
+        <Route path="./About.jsx" element={<About/>} />
+        <Route path="./Work.jsx" element={<Work/>} />
+        <Route path="./Contact.jsx" element={<Contact/>} />
       </Routes>
     <Lights/>
     <Navbar/>
