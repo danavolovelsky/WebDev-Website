@@ -94,7 +94,7 @@ export default function Navbar()
 
       <Html rotation={currentNavbarRotation} position={currentNavbarPosition} transform>        
       <div className="navbar">
-      <a onClick={() => {navigate("/home"); handleLinkClick('home');}} className={navbarStyle.home}>Home</a>
+<a onClick={() => {navigate("/home"); handleLinkClick('home');}} className={navbarStyle.home}>Home</a>
 <a onClick={() => {navigate("/about"); handleLinkClick('about');}} className={navbarStyle.about}>About</a>
 <a onClick={() => {navigate("/work"); handleLinkClick('work');}} className={navbarStyle.work}>Work</a>        
 <a onClick={() => {navigate("/contact"); handleLinkClick('contact');}} className={navbarStyle.contact}>Contact</a>
