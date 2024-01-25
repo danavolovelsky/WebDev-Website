@@ -133,7 +133,7 @@ function bookOnShelves(scene, bookshelf, shelf, numberOfBooks, projectBookRef) {
 // Clear existing books (dont add new books to the scene via iteration)
 
 {
-  /*OpenAI GPT-3.5. (2023). AI-Generated Code Snippet (Accessed: December 2, 2023)*/
+  /*OpenAI GPT-3.5. (2023). AI-Generated Code Snippet to (Accessed: December 2, 2023)*/
 }
 function clearBooks(scene) {
   scene.children.forEach((child) => {

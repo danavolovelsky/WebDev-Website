@@ -1,3 +1,4 @@
+//Depending on the internet connection the first time loading can take around 1 min
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Canvas } from "@react-three/fiber";
