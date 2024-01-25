@@ -100,7 +100,7 @@ export default function Work() {
           position={[book.position.x, book.position.y, book.position.z]}
           args={[3.2, book.height]}
           onClick={() => handleProjectBookClick(index)}
-          material={new THREE.MeshBasicMaterial({ color: 0xffff00, transparent: true, opacity: 0 })}
+          material={new THREE.MeshBasicMaterial({ color: 0xffff00, transparent: true, opacity: 0.7 })}
         />
       ))}
       {showTurnBook && <Popup page={page} onClose={handlePopupClose}/>}

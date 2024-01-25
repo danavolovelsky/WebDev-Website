@@ -25,6 +25,7 @@ body {
 }
 
 .navbar-link {
+  cursor: pointer;
   text-align: center;
   background-color: #000435;
   color: rgb(255, 255, 255);
@@ -70,7 +71,6 @@ label {
 
 #contact {
   font-family: 'Swanky and Moo Moo', sans-serif;
-  margin: 0;
   width: 32.99vw; /* Converted from 475px */
   min-height: 92.5vh;
   background-attachment: local;
@@ -108,10 +108,11 @@ textarea {
 }
 
 button {
+  cursor: pointer;
   margin: 0.69vw; /* Converted from 1px */
   font-family: 'Swanky and Moo Moo', sans-serif;
   font-size: 2.08vw; /* Converted from 30px */
-  background-color: transparent;
+  background-color: white;
   width: 9.38vw; /* Converted from 33% */
   margin-inline-start: 9.38vw; /* Converted from 33% */
   border: 0.14vw solid black; /* Converted from solid black */
@@ -125,18 +126,20 @@ button:hover {
   margin-top: -0.14vw; /* Converted from -2px */
 }
 
-
-
 .externalBook {
   width: 55.56vw; /* Converted from 800px */
   height: 34.72vw; /* Converted from 500px */
 }
 
 #iframe {
+  width: 100%;
+    height: 80vh;
+    margin-top: 0.69vw;
   margin-top: 0.69vw; /* Converted from 10px */
 }
 
 #bookButton {
+  background-color: rgb(197, 214, 244);
   width: 7vw; /* Converted from 12% */
   margin-inline-start: 59.03vw; /* Converted from 85% */
 }
@@ -161,7 +164,7 @@ button:hover {
 }
 
 #recordPlayer video {
-  padding-top: 1.39vw; /* Converted from 20px */
+  padding-top: 1.59vw; /* Converted from 20px */
 }
 
 #recordPlayerText {
@@ -176,18 +179,80 @@ button:hover {
    font-size: 1.4vw;
   }
   #contact {
-    width: 25%; /* Adjust as needed for tablet size */
+    min-height: 72.5vh;
   }
+  .navbar-link {
+    font-size: 5.3vw; /* Converted from 55px */
+    padding: 1.8vw; /* Converted from 30px */
+    padding-left: 3.13vw; /* Converted from 45px */
+    padding-right: 2.8vw; /* Converted from 45px */
+    margin-bottom: 6vw; /* Converted from 100px */
+  }
+  .navbar-link.navbar-link.active {
+    font-size: 3.4vw; /* Converted from 29.7px */
+    padding: 1.73vw; /* Converted from 16.2px */
+    margin-bottom: 3.75vw;
+  }
+
+  #iframe {
+    width: 100%;
+      height: 60vh;
+      margin-left: 2vw;
+      margin-top: 10vh;
+  }
+  button {
+    margin-right: 70px;
+    margin-inline-start: 19.03vw; /* Converted from 85% */
+  }
+
 }
     /* small screens (mobile devices) */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1000px) {
   #aboutme{
-    font-size: 0.7vw;
-    padding-left: 10vw;
+    font-size: 0.9vw;
+    padding-left: 0vw;
+    padding-top: 5.5vh;
+    width: 23vw;
   }
   #contact {
-    width: 90%; /* Adjust as needed for tablet size */
-    font-size: 16px; /* Adjust as needed for tablet size */
+    margin-top: -6vh;
+    min-height: 22.5vh;
+    width: 22.99vw; /* Converted from 475px */
+    max-height: 73vh;
+
+  }
+  #contact p {
+    margin-top: 1.5vw; /* Converted from 65px */
+  }
+
+  .navbar-link {
+    font-size: 9.3vw; /* Converted from 55px */
+    padding: 3vw; /* Converted from 30px */
+    padding-left: 3.13vw; /* Converted from 45px */
+    padding-right: 2.8vw; /* Converted from 45px */
+    margin-bottom: 9vw; /* Converted from 100px */
+  }
+  .navbar-link.navbar-link.active {
+    font-size: 8.06vw; /* Converted from 29.7px */
+    padding: 1.73vw; /* Converted from 16.2px */
+    margin-bottom: 3.75vw;
+    margin-right: 70vw; /* Converted from 54.1px */
+  }
+  #iframe {
+    width: 100%;
+      height: 80vh;
+      margin-left: 0vw;
+      margin-top: 2vh;
+  }
+
+  #recordPlayer video {
+    width: 6vw; /* Converted from 20px */
+  }
+
+  button {
+    position:absolute;
+    top: 80%;
+    left: 30%; /* Converted from 85% */
   }
 }

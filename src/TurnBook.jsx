@@ -20,11 +20,11 @@ const Popup = ({page, onClose}) => {
   }, []); 
    return (
     <Html position={[-30.3, 18.6, -17.5]}>
-      <Modal
+      <Modal className="modal"
   isOpen={modalIsOpen}
         style={{
           overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
           },
           content: {
             position: 'absolute',
@@ -38,8 +38,6 @@ const Popup = ({page, onClose}) => {
       <iframe
         id="iframe"
         src={`/turntest.html?page=${page}`}
-                width="100%"
-        height="550px"
       />
     </div>
 
