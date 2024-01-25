@@ -38,6 +38,7 @@ const Popup = ({page, onClose}) => {
       <iframe
         id="iframe"
         src={`/turntest.html?page=${page}`}
+
       />
     </div>
 

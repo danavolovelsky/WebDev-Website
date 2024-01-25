@@ -150,6 +150,7 @@ button:hover {
 }
 
 #flipbook .page {
+  background-color: rgb(197, 214, 244);
   width: 55.56vw; /* Converted from 800px */
   height: 41.67vw; /* Converted from 600px */
   padding: 0.69vw; /* Converted from 10px */
