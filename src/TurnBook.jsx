@@ -1,51 +1,59 @@
-import { Html } from '@react-three/drei';
-import React, { useLayoutEffect, useState, useEffect } from 'react';
-import Modal from 'react-modal';
-import { useRef } from 'react';
+import { Html } from "@react-three/drei";
+import React, { useState, useEffect } from "react";
+import Modal from "react-modal";
 
-const Popup = ({page, onClose}) => {
+const Popup = ({ page, onClose }) => {
+  //Manage modal open/close
   const [modalIsOpen, setModalIsOpen] = useState(true);
-  Modal.setAppElement('#root');
+  Modal.setAppElement("#root"); //For accessibility needs (Screen readers)
 
+  //function to close modal
   const closeModal = () => {
     setModalIsOpen(false);
   };
-  
+
+  //Function to handle closing the modal (lets parent know about closing event)
   const handleClose = () => {
     onClose();
-  }; 
-  // Log a message when the component is rendered
+  };
   useEffect(() => {
-    console.log('Popup component rendered');
-  }, []); 
-   return (
+    console.log("Popup component rendered");
+  }, []);
+
+  return (
     <Html position={[-30.3, 18.6, -17.5]}>
-      <Modal className="modal"
-  isOpen={modalIsOpen}
+      <Modal
+        className="modal"
+        isOpen={modalIsOpen} //Control if modal is open
         style={{
           overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
           },
           content: {
-            position: 'absolute',
-            top: '8%', // Adjust the vertical position
-            left: '25%',
-            width: 'auto', // Set width to auto
-            height: '580px', // Set height to auto
-          },}}
+            position: "absolute",
+            top: "8%",
+            left: "25%",
+            width: "auto",
+            height: "580px",
+          },
+        }}
       >
-          <div className="externalBook">
-      <iframe
-        id="iframe"
-        src={`/turntest.html?page=${page}`}
+        {/*Content inside modal */}
+        <div className="externalBook">
+          <iframe id="iframe" src={`/turntest.html?page=${page}`} />{" "}
+          {/*Show specific bookpage */}
+        </div>
 
-      />
-    </div>
-
-    <button id="bookButton" onClick={() => {closeModal(); handleClose();}}>
-  Close
-</button>
-              </Modal>
+        <button
+          id="bookButton"
+          onClick={() => {
+            closeModal();
+            handleClose();
+          }}
+        >
+          Close
+        </button>
+      </Modal>
     </Html>
   );
 };

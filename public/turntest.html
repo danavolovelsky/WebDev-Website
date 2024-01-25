@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Title</title>
+  <link rel="stylesheet" href="src/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="/turn.min.js"></script>
-  <link rel="stylesheet" href="src/main.css">
-
 </head>
-<body style="margin: 0; padding: 0; overflow: hidden; position: relative; height: 100vh;">
+
+<body>
+
   <div id="flipbook">
     <div class="hard"> empty </div>
 
-      <div class="page"> 
-        <h1>Processing Work</h1>
+    <!-- First set of double pages-->
+    <div class="page">
+      <h1>Processing Work</h1>
 
-        <video id="recordPlayerVid" width="360" height="200" controls>
-          <source src="./visuals/RecordPlayer.mov">
-          Your browser does not support the video tag.
-        </video>
-        <a href="https://github.com/danavolovelsky/Small-processing-projects">Github Link</a>
-            </div>
+      <video id="recordPlayerVid" width="360" height="200" controls>
+        <source src="./visuals/RecordPlayer.mov">
+        Your browser does not support the video tag.
+      </video>
+      <a href="https://github.com/danavolovelsky/Small-processing-projects">Github Link</a>
+    </div>
 
-      <div class="page">  
-        <h2>Description</h2>
+    <div class="page">
+      <h2>Description</h2>
 
-        <p id="recordPlayerText">     
-          The music player instrument is a visually appealing and interactive experience, 
-            resembling a record player with a rotating disc and album covers. </br> </br> 
-            Users can customize volume, frequency, and timbre, blending traditional and modern music elements. 
-            Design enhancements include adjustable record rotation speed for synchronized visual representation, 
-            AI-generated unique album covers, and a vintage scratch effect for an authentic sound. </br></br> 
-            Operating instructions involve necessary libraries, sliders for volume, 
-            frequency, and timbre, and song selection with the spacebar for pause/resume. 
-            Royalty-free songs from Bensound.com are used.</p>
-        </div>
+      <p id="recordPlayerText">
+        The music player instrument is a visually appealing and interactive experience,
+        resembling a record player with a rotating disc and album covers. </br> </br>
+        Users can customize volume, frequency, and timbre, blending traditional and modern music elements.
+        Design enhancements include adjustable record rotation speed for synchronized visual representation,
+        AI-generated unique album covers, and a vintage scratch effect for an authentic sound. </br></br>
+        Operating instructions involve necessary libraries, sliders for volume,
+        frequency, and timbre, and song selection with the spacebar for pause/resume.
+        Royalty-free songs from Bensound.com are used.</p>
+    </div>
 
-      <div class="page"> 
-        <h1>Arduino Work</h1>
-        <video id="recordPlayerVid" width="400" height="430" controls>
-          <source src="./visuals/musicGarden.mov">
-        </video>
-      </div>
-     
-      <div class="page"> 
-        <h2>Presentation</h2>
+    <!-- Second set of double pages-->
 
-        <iframe src="https://artslondon-my.sharepoint.com/personal/d_volovelsky0320221_arts_ac_uk/_layouts/15/Doc.aspx?sourcedoc={02142dbf-e01d-4a0e-8764-ec2dc07332dc}&amp;action=embedview&amp;wdAr=1.7770833333333333&amp;wdEaaCheck=1" width="380px" height="258px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-              <a href="https://github.com/danavolovelsky/Music-Garden">Github Link</a>
+    <div class="page">
+      <h1>Arduino Work</h1>
+      <video id="recordPlayerVid" width="400" height="430" controls>
+        <source src="./visuals/musicGarden.mov">
+      </video>
+    </div>
 
-      </div>
+    <div class="page">
+      <h2>Presentation</h2>
 
-      <div class="page"> 
-        <h1>P5.js Work (WIP)</h1>
-        <img src="./visuals/gameStart.png" width="380" height="auto" alt="Image 2">
-        <img src="./visuals/game.png" width="380" height="auto" alt="Image 2">
+      <iframe
+        src="https://artslondon-my.sharepoint.com/personal/d_volovelsky0320221_arts_ac_uk/_layouts/15/Doc.aspx?sourcedoc={02142dbf-e01d-4a0e-8764-ec2dc07332dc}&amp;action=embedview&amp;wdAr=1.7770833333333333&amp;wdEaaCheck=1"
+        width="380px" height="258px" frameborder="0">This is an embedded <a target="_blank"
+          href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank"
+          href="https://office.com/webapps">Office</a>.</iframe>
+      <a href="https://github.com/danavolovelsky/Music-Garden">Github Link</a>
 
-      </div>
-      <div class="page"> 
-        <img src="./visuals/gameRules.png" width="380" height="auto" alt="Image 2">
-        <p id="recordPlayerText">     
-          This is a little dress-up game crafted with P5.js. </br>
-          Typically, I focus on creating more artistic and visually appealing content, </br>
-          making this one of my first ventures into game development.  </p>      </div>
+    </div>
 
-      </div>
-      <div class="hard"> empty </div>
+    <!-- Third set of double pages-->
+    <div class="page">
+      <h1>P5.js Work (WIP)</h1>
+      <img src="./visuals/gameStart.png" width="380" height="auto" alt="Image 2">
+      <img src="./visuals/game.png" width="380" height="auto" alt="Image 2">
+
+    </div>
+    <div class="page">
+      <img src="./visuals/gameRules.png" width="380" height="auto" alt="Image 2">
+      <p id="recordPlayerText">
+        This is a little dress-up game crafted with P5.js. </br>
+        Typically, I focus on creating more artistic and visually appealing content, </br>
+        making this one of my first ventures into game development. </p>
+    </div>
+
+  </div>
+  <div class="hard"> empty </div>
 
 
   </div>
@@ -75,32 +86,34 @@
     // Get the page parameter from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const initialPage = urlParams.get('page');
+
+    //Check that value won`t be under 2, so the book will be diplayed open all the time
     if (initialPage < 2) {
       initialPage = 2;
     }
-    // Use the initialPage value to set the initial page of the turnjs book
+    // get flipbook element by ID
     const flipbookElement = document.getElementById('flipbook');
+
+    //Check if flipbook exists and has a page value (number)
     if (flipbookElement && initialPage) {
+      //Initalize book with turn.js
       $(flipbookElement).turn({
-        autoCenter: true,
-        display: 'double',
-        page: parseInt(initialPage), // Parse the page parameter as an integer
-        // ... (other configurations)
+        autoCenter: true, //center page
+        display: 'double', //two pages open at once
+        page: parseInt(initialPage), // inital page of book depends on variable initialPage
       });
 
-      $(flipbookElement).bind('turning', function(event, page, view) {
+      //Bind turning event handler -> If the current page is one, prevent to further turn the page
+      $(flipbookElement).bind('turning', function (event, page, view) {
         if (page == 1) {
           event.preventDefault();
         }
       });
-  
+
       // Hide the first page using CSS
       $('.p1').hide();
     }
-
-
-  
   </script>
 </body>
-</html>
 
+</html>

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&display=swap');
 
 @font-face {
-  font-family: 'Swanky and Moo Moo'; /*"Swanky and Moo Moo"*/
+  font-family: 'Swanky and Moo Moo';
+  /*"Swanky and Moo Moo"*/
   src: url('./SwankyandMooMoo-Regular.ttf') format('truetype');
 }
 
@@ -9,7 +10,7 @@ body {
   margin: 0;
   overflow: hidden;
   background-color: black;
-  
+
 }
 
 #root {
@@ -30,11 +31,11 @@ body {
   background-color: #000435;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 3.82vw; /* Converted from 55px */
-  padding: 2.08vw; /* Converted from 30px */
-  padding-left: 3.13vw; /* Converted from 45px */
-  padding-right: 3.13vw; /* Converted from 45px */
-  margin-bottom: 6.94vw; /* Converted from 100px */
+  font-size: 3.82vw;
+  padding: 2.08vw;
+  padding-left: 3.13vw;
+  padding-right: 3.13vw;
+  margin-bottom: 6.94vw;
   display: block;
 }
 
@@ -44,47 +45,47 @@ body {
   background-color: #000435;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 2.06vw; /* Converted from 29.7px */
-  padding: 1.13vw; /* Converted from 16.2px */
-  padding-left: 1.69vw; /* Converted from 24.3px */
-  padding-right: 1.69vw; /* Converted from 24.3px */
-  margin-bottom: 3.75vw; /* Converted from 54.1px */
+  font-size: 2.06vw;
+  padding: 1.13vw;
+  padding-left: 1.69vw;
+  padding-right: 1.69vw;
+  margin-bottom: 3.75vw;
   display: block;
 }
 
 #aboutme {
   color: #000435;
   position: absolute;
-  font-size: 1.3vw; /* Converted from 21px */
-  top: -2.78vw; /* Converted from -40px */
-  left: 0.83vw; /* Converted from 12px */
+  font-size: 1.3vw;
+  top: -2.78vw;
+  left: 0.83vw;
   transform: translate(-50%, -50%);
-  width: 34.72vw; /* Converted from 500px */
+  width: 34.72vw;
 }
 
 
 
 label {
-  margin-bottom: 2.15vw; /* Converted from 31px */
+  margin-bottom: 2.15vw;
   display: inline-block;
 }
 
 #contact {
   font-family: 'Swanky and Moo Moo', sans-serif;
-  width: 32.99vw; /* Converted from 475px */
+  width: 32.99vw;
   min-height: 92.5vh;
   background-attachment: local;
   background-image: linear-gradient(to right, white 0.69vw, transparent 0.69vw),
     linear-gradient(to left, white 0.69vw, transparent 0.69vw),
     repeating-linear-gradient(white, white 2.08vw, #ccc 2.08vw, #ccc 2.15vw, white 2.15vw);
-  line-height: 2.08vw; /* Converted from 30px */
-  padding: 0.55vw 0.69vw; /* Converted from 8px 10px */
-  font-size: 1.59vw; /* Converted from 23px */
+  line-height: 2.08vw;
+  padding: 0.55vw 0.69vw;
+  font-size: 1.59vw;
 }
 
 #contact p {
-  margin-top: 4.51vw; /* Converted from 65px */
-  margin-bottom: 1.84vw; /* Converted from 32px */
+  margin-top: 4.51vw;
+  margin-bottom: 1.84vw;
 }
 
 input,
@@ -94,54 +95,54 @@ textarea {
   background: none;
   outline: none;
   display: inline-block;
-  padding-left: 1.38vw; /* Converted from 20px */
-  font-size: 1.38vw; /* Converted from 20px */
+  padding-left: 1.38vw;
+  font-size: 1.38vw;
 }
 
 input {
-  width: 92.36vw; /* Converted from 95% */
+  width: 92.36vw;
 }
 
 textarea {
-  width: 129.17vw; /* Converted from 140% */
-  line-height: 2.15vw; /* Converted from 31px */
+  width: 129.17vw;
+  line-height: 2.15vw;
 }
 
 button {
   cursor: pointer;
-  margin: 0.69vw; /* Converted from 1px */
+  margin: 0.69vw;
   font-family: 'Swanky and Moo Moo', sans-serif;
-  font-size: 2.08vw; /* Converted from 30px */
+  font-size: 2.08vw;
   background-color: white;
-  width: 9.38vw; /* Converted from 33% */
-  margin-inline-start: 9.38vw; /* Converted from 33% */
-  border: 0.14vw solid black; /* Converted from solid black */
-  padding: 0.23vw; /* Converted from 8.3px */
+  width: 9.38vw;
+  margin-inline-start: 9.38vw;
+  border: 0.14vw solid black;
+  padding: 0.23vw;
 }
 
 button:hover {
   background-color: black;
   color: white;
-  font-size: 2.43vw; /* Converted from 35px */
-  margin-top: -0.14vw; /* Converted from -2px */
+  font-size: 2.43vw;
+  margin-top: -0.14vw;
 }
 
 .externalBook {
-  width: 55.56vw; /* Converted from 800px */
-  height: 34.72vw; /* Converted from 500px */
+  width: 55.56vw;
+  height: 34.72vw;
 }
 
 #iframe {
   width: 100%;
-    height: 80vh;
-    margin-top: 0.69vw;
-  margin-top: 0.69vw; /* Converted from 10px */
+  height: 80vh;
+  margin-top: 0.69vw;
+  margin-top: 0.69vw;
 }
 
 #bookButton {
   background-color: rgb(197, 214, 244);
-  width: 7vw; /* Converted from 12% */
-  margin-inline-start: 59.03vw; /* Converted from 85% */
+  width: 7vw;
+  margin-inline-start: 59.03vw;
 }
 
 #flipbook {
@@ -151,9 +152,9 @@ button:hover {
 
 #flipbook .page {
   background-color: rgb(197, 214, 244);
-  width: 55.56vw; /* Converted from 800px */
-  height: 41.67vw; /* Converted from 600px */
-  padding: 0.69vw; /* Converted from 10px */
+  width: 55.56vw;
+  height: 41.67vw;
+  padding: 0.69vw;
 }
 
 #flipbook .page:nth-child(1) {
@@ -165,95 +166,105 @@ button:hover {
 }
 
 #recordPlayer video {
-  padding-top: 1.59vw; /* Converted from 20px */
+  padding-top: 1.59vw;
 }
 
 #recordPlayerText {
-  font-size: 1.11vw; /* Converted from 16px */
-  padding-left: 0.35vw; /* Converted from 5px */
-  padding-right: 1.39vw; /* Converted from 20px */
+  font-size: 1.11vw;
+  padding-left: 0.35vw;
+  padding-right: 1.39vw;
 }
 
-    /* medium screens (tablets) */
+/* medium screens (tablets) */
+
 @media only screen and (max-width: 1400px) {
   #aboutme {
-   font-size: 1.4vw;
+    font-size: 1.4vw;
   }
+
   #contact {
     min-height: 72.5vh;
   }
+
   .navbar-link {
-    font-size: 5.3vw; /* Converted from 55px */
-    padding: 1.8vw; /* Converted from 30px */
-    padding-left: 3.13vw; /* Converted from 45px */
-    padding-right: 2.8vw; /* Converted from 45px */
-    margin-bottom: 6vw; /* Converted from 100px */
+    font-size: 5.3vw;
+    padding: 1.8vw;
+    padding-left: 3.13vw;
+    padding-right: 2.8vw;
+    margin-bottom: 6vw;
   }
+
   .navbar-link.navbar-link.active {
-    font-size: 3.4vw; /* Converted from 29.7px */
-    padding: 1.73vw; /* Converted from 16.2px */
+    font-size: 3.4vw;
+    padding: 1.73vw;
     margin-bottom: 3.75vw;
   }
 
   #iframe {
     width: 100%;
-      height: 60vh;
-      margin-left: 2vw;
-      margin-top: 10vh;
+    height: 60vh;
+    margin-left: 2vw;
+    margin-top: 10vh;
   }
+
   button {
     margin-right: 70px;
-    margin-inline-start: 19.03vw; /* Converted from 85% */
+    margin-inline-start: 19.03vw;
   }
 
 }
-    /* small screens (mobile devices) */
+
+/* small screens (mobile devices) */
 
 @media only screen and (max-width: 1000px) {
-  #aboutme{
+  #aboutme {
     font-size: 0.9vw;
     padding-left: 0vw;
     padding-top: 5.5vh;
     width: 23vw;
   }
+
   #contact {
     margin-top: -6vh;
     min-height: 22.5vh;
-    width: 22.99vw; /* Converted from 475px */
+    width: 22.99vw;
     max-height: 73vh;
 
   }
+
   #contact p {
-    margin-top: 1.5vw; /* Converted from 65px */
+    margin-top: 1.5vw;
   }
 
   .navbar-link {
-    font-size: 9.3vw; /* Converted from 55px */
-    padding: 3vw; /* Converted from 30px */
-    padding-left: 3.13vw; /* Converted from 45px */
-    padding-right: 2.8vw; /* Converted from 45px */
-    margin-bottom: 9vw; /* Converted from 100px */
+    font-size: 9.3vw;
+    padding: 3vw;
+    padding-left: 3.13vw;
+    padding-right: 2.8vw;
+    margin-bottom: 9vw;
   }
+
   .navbar-link.navbar-link.active {
-    font-size: 8.06vw; /* Converted from 29.7px */
-    padding: 1.73vw; /* Converted from 16.2px */
+    font-size: 8.06vw;
+    padding: 1.73vw;
     margin-bottom: 3.75vw;
-    margin-right: 70vw; /* Converted from 54.1px */
+    margin-right: 70vw;
   }
+
   #iframe {
     width: 100%;
-      height: 80vh;
-      margin-left: 0vw;
-      margin-top: 2vh;
+    height: 80vh;
+    margin-left: 0vw;
+    margin-top: 2vh;
   }
 
   #recordPlayer video {
-    width: 6vw; /* Converted from 20px */
+    width: 6vw;
   }
 
   button {
-    position:absolute;
+    position: absolute;
     top: 80%;
-    left: 30%; /* Converted from 85% */
+    left: 30%;
   }
 }

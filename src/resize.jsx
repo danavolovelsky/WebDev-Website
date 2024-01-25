@@ -1,49 +1,60 @@
-import React, { useEffect, useRef } from 'react';
-import { useThree } from 'react-three-fiber';
-import * as THREE from 'three';
+import { useEffect, useRef } from "react";
+import { useThree } from "react-three-fiber";
+import * as THREE from "three";
 
+// Changing camera field of view for responsive design
 const Resize = () => {
-  const { set } = useThree();
-  const cameraRef = useRef(new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000));
+  const { set } = useThree(); //Accessing three.js context
 
+  //Initial camera reference
+  const cameraRef = useRef(
+    new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    )
+  );
+
+  //update camera settings on window size
   const updateCamera = () => {
-    const { innerWidth: width, innerHeight: height } = window;
-    const aspectRatio = width / height;
-    const fov = calculateFov(width);
+    const { innerWidth: width, innerHeight: height } = window; // getting width and height
+    const aspectRatio = width / height; //calculating aspect ratio
+    const fov = calculateFov(width); //Calculating fov based on width
 
+    //Update camera properties
     cameraRef.current.fov = fov;
     cameraRef.current.aspect = aspectRatio;
     cameraRef.current.updateProjectionMatrix();
 
+    //updating camera in three.js context
     set((state) => ({
       ...state,
       camera: cameraRef.current,
     }));
   };
 
+  //OpenAI GPT-3.5 (2023). AI-Generated Code Snippet for keeping track of camera (Accessed: January 21, 2024)
   useEffect(() => {
     // Initial setup of the camera
     updateCamera();
 
-    // Add event listener for window resize
-    window.addEventListener('resize', updateCamera);
+    // Event listener for window resize
+    window.addEventListener("resize", updateCamera);
 
-    // Clean up the event listener on component unmount
+    // Clean up function to prevent memory leaks, so that updatecamera function wont be called unnecessarily
     return () => {
-      window.removeEventListener('resize', updateCamera);
+      window.removeEventListener("resize", updateCamera);
     };
-  }, [set]);
+  }, [set]); //effect is only re-run if the set function reference changes
 
-  // This component doesn't render anything
   return null;
 };
 
 // Function to calculate FOV
 const calculateFov = (width) => {
-  console.log('Window width:', width);
+  console.log("Window width:", width);
 
-  // Implement your FOV calculation here
-  // This is just a placeholder
   if (width <= 768) {
     // Mobile devices
     return 110;

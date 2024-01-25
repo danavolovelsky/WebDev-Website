@@ -1,33 +1,21 @@
-import React, {useState, useEffect, useRef} from 'react';
-import { Html } from '@react-three/drei';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import { useFrame, useThree } from "@react-three/fiber"
-import { useTexture, Torus } from '@react-three/drei';
-import BookShelf from './BookShelf';
-import { useScene } from './SceneContext';
+import { useEffect } from "react";
+import * as THREE from "three";
+import { useFrame } from "@react-three/fiber";
+import { useScene } from "./SceneContext";
 
-export default function Home()
-{
-    const { setCameraAnimation, cameraAnimation, cameraPositions } = useScene();
+//Camera animation logic for the homepage
+export default function Home() {
+  const { setCameraAnimation, cameraAnimation, cameraPositions } = useScene();
 
-    useEffect(() => {
-      // Animate to the work state
-      setCameraAnimation("home");
-    }, [setCameraAnimation]);
-  
-    useFrame(({ camera }) => {
-      // Update camera position using interpolation
-      const { position, lookAt } = cameraPositions[cameraAnimation];
-      camera.position.lerp(new THREE.Vector3(...position), 0.03);
-      camera.lookAt(lookAt);    
-    });
+  useEffect(() => {
+    // Animate to the work state
+    setCameraAnimation("home");
+  }, [setCameraAnimation]);
 
-   
-
-      return (
-    <>
-     
-    </>
-  );
+  useFrame(({ camera }) => {
+    // Update camera position using interpolation
+    const { position, lookAt } = cameraPositions[cameraAnimation];
+    camera.position.lerp(new THREE.Vector3(...position), 0.03);
+    camera.lookAt(lookAt);
+  });
 }
